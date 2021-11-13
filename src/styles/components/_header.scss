@@ -87,7 +87,8 @@
       margin-left: 60px;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       &::before {
         width: 100%;
       }
@@ -98,7 +99,7 @@
       position: absolute;
       width: 0;
       height: 10px;
-      bottom: 0;
+      bottom: 3px;
       opacity: 0.5;
       background-color: $blue;
       transition: 0.3s width;
