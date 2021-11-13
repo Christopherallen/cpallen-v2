@@ -1,33 +1,51 @@
 .header {
   $this: &;
 
-  padding: 50px 0;
+  padding: 25px 0;
+
+  @include respond-to('small') {
+    padding: 50px 0;
+  }
 
   &__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include respond-to('small') {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    text-align: center;
   }
 
   &__logo-link {
-    display: flex;
-    align-items: center;
     text-decoration: none;
     color: $black;
 
-    &:hover {
-      #{$this}__logo-name {
-        span {
-          opacity: 1;
+    @include respond-to('small') {
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        #{$this}__logo-name {
+          span {
+            opacity: 1;
+          }
         }
       }
     }
   }
 
   &__logo-name {
-    font-size: 56px;
+    @extend %logo-text;
+
+    display: none;
     margin-left: 5px;
-    font-weight: 800;
+
+    @include respond-to('small') {
+      display: initial;
+    }
 
     span {
       opacity: 0;
@@ -47,16 +65,27 @@
 
   &__nav-list {
     display: flex;
+    margin-top: 50px;
+    padding-left: 0;
+    justify-content: center;
     list-style: none;
+
+    @include respond-to('small') {
+      margin-top: 0;
+    }
   }
 
   &__nav-link {
     @extend %nav-link;
 
     position: relative;
-    margin-left: 60px;
+    margin: 0 30px;
     text-decoration: none;
     color: $black;
+
+    @include respond-to('small') {
+      margin-left: 60px;
+    }
 
     &:hover {
       &::before {
