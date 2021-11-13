@@ -1,0 +1,9 @@
+.button {
+  @extend %button-text;
+
+  display: inline-block;
+  padding: 17px 40px;
+  background-color: $blue;
+  color: $white;
+  text-decoration: none;
+}

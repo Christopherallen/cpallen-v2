@@ -12,7 +12,7 @@ const Header = ({ siteTitle }) => (
             <StaticImage
               src="../images/logo.svg"
               width={77}
-              quality={77}
+              quality={100}
               placeholder="none"
               formats={["auto", "webp", "avif"]}
               alt="Chris Allen's Logo"
