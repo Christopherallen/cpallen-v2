@@ -1,4 +1,6 @@
 .intro {
+  $this: &;
+
   &__wrapper {
     position: relative;
   }
@@ -25,11 +27,23 @@
   &__profile-wrapper {
     position: relative;
     display: inline-block;
+    margin-top: 75px;
+
+    // &:hover {
+    //   #{$this}__op--foreground {
+    //     opacity: 0.50;
+    //   }
+
+    //   #{$this}__op--background {
+    //     opacity: 0.25;
+    //   }
+    // }
 
     @include respond-to('small') {
       position: absolute;
       right: -15px;
       bottom: -175px;
+      margin-top: 0;
     }
   }
 
@@ -37,60 +51,94 @@
     position: absolute;
     display: block;
     color: $blue;
+    pointer-events: none;
+    opacity: 0;
+    transition: 800ms opacity;
 
     &--foreground {
       font-size: 64px;
-      opacity: 0.75;
+      opacity: 0;
+      animation: fadeForeground 0.5s ease both;
     }
 
     &--background {
       font-size: 32px;
-      opacity: 0.4;
+      animation: fadeBackground 0.5s ease both;
     }
 
     &--one {
       top: 5px;
       left: 10px;
+      animation-delay: 400ms;
     }
 
     &--two {
       top: 40px;
       right: -20px;
+      animation-delay: 1000ms;
     }
 
     &--three {
       bottom: -20px;
       left: -70px;
+      animation-delay: 700ms;
     }
 
     &--four {
       bottom: -50px;
       right: -50px;
+      animation-delay: 1500ms;
     }
 
     &--five {
       top: -90px;
       right: 120px;
+      animation-delay: 1900ms;
     }
 
     &--six {
       top: 55%;
       right: -140px;
+      animation-delay: 2000ms;
     }
 
     &--seven {
       bottom: -110px;
       left: 100px;
+      animation-delay: 1700ms;
     }
 
     &--eight {
       bottom: 170px;
       left: -130px;
+      animation-delay: 1300;
     }
 
     &--nine {
       bottom: -50px;
       left: -236px;
+      animation-delay: 170ms;
     }
+  }
+}
+
+
+@keyframes fadeForeground {
+  from {
+    opacity: 0;
+  }
+
+  to {
+      opacity: 0.5;
+  }
+}
+
+@keyframes fadeBackground {
+  from {
+    opacity: 0;
+  }
+
+  to {
+      opacity: 0.25;
   }
 }

@@ -10,15 +10,35 @@
 }
 
 %page-title {
-  font-size: 96px;
+  font-size: 48px;
   line-height: 1.1;
   font-weight: 900;
+
+  @include respond-to('small') {
+    font-size: 96px;
+  }
 }
 
 %sub-title {
-  font-size: 64px;
+  font-size: 32px;
   line-height: 1.5;
   font-weight: 400;
+
+  @include respond-to('small') {
+    font-size: 64px;
+  }
+}
+
+%section-title {
+  font-size: 64px;
+  line-height: 1.5;
+  font-weight: 900;
+}
+
+%item-title {
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: 900;
 }
 
 %body-copy {

@@ -1,0 +1,33 @@
+.work-list {
+  margin-top: 400px;
+
+  &__section-title {
+    @extend %section-title;
+
+    text-align: center;
+  }
+  &__item-image {
+    border: 10px solid #eeee;
+  }
+
+  &__item-content-wrapper {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item-title {
+    @extend %item-title;
+
+    margin-bottom: 0;
+  }
+
+  &__item-description {
+    @extend %body-copy;
+  }
+
+  &__item-description {
+    max-width: 445px;
+  }
+}
