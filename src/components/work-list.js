@@ -1,12 +1,14 @@
 import * as React from "react"
+
 import { StaticImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
 
 const Work = ( props ) => {
   const work = props.data;
 
   const workList = work.map(( work ) =>
     <div className="work-list__item">
-      <a href="#">
+      <Link to={ work.uri }>
         <StaticImage
           src="../images/work-featured-fresh.jpg"
           width={1100}
@@ -16,14 +18,14 @@ const Work = ( props ) => {
           alt="Fresh Consulting Website"
           className="work-list__item-image"
         />
-      </a>
+      </Link>
       <div className="work-list__item-content-wrapper">
         <div className="work-list__item-right-col">
           <h3 className="work-list__item-title">{work.title}</h3>
           <p className="work-list__item-description">{work.content}</p>
         </div>
         <div className="work-list__item-left-col">
-          <a href="#" className="button button--ghost-dark">View Details</a>
+          <Link to={ work.uri } className="button button--ghost-dark">View Details</Link>
         </div>
       </div>
     </div>

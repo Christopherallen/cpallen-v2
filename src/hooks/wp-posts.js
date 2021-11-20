@@ -6,6 +6,7 @@ const UseWordPressPost = () => {
         allWpPost {
           nodes {
             id
+            uri
             title
             content
           }
