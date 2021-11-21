@@ -16,18 +16,23 @@
   }
 
   &__logo {
+    position: relative;
     text-align: center;
+    z-index: 2;
   }
 
   &__logo-link {
     text-decoration: none;
     color: $black;
+    transition: 0.3s transform ease-out;
 
     @include respond-to('small') {
       display: flex;
       align-items: center;
 
       &:hover {
+        transform: translateX(-4px);
+
         #{$this}__logo-name {
           span {
             opacity: 1;
@@ -79,30 +84,19 @@
     @extend %nav-link;
 
     position: relative;
+    display: inline-block;
     margin: 0 30px;
     text-decoration: none;
     color: $black;
+    transition: 0.3s transform ease-out;
+    z-index: 2;
+
+    &:hover {
+      transform: translateX(-4px);
+    }
 
     @include respond-to('small') {
       margin-left: 60px;
-    }
-
-    &:hover,
-    &:focus {
-      &::before {
-        width: 100%;
-      }
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 10px;
-      bottom: 3px;
-      opacity: 0.5;
-      background-color: $blue;
-      transition: 0.3s width;
     }
   }
 }

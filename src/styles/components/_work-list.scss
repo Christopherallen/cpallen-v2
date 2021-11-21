@@ -13,6 +13,10 @@
 
   &__item-image {
     border: 10px solid #eeee;
+
+    &:hover {
+      cursor: none;
+    }
   }
 
   &__item-content-wrapper {

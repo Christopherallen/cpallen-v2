@@ -14,7 +14,6 @@ const path = require(`path`)
        }
      }
    `).then(result => {
-    console.log(JSON.stringify(result, null, 4))
     result.data.allWpPost.nodes.forEach(node => {
         createPage({
           path: node.slug,

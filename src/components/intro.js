@@ -1,5 +1,8 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
+import Icon from "../images/arrow-down.svg"
+
 
 const Intro = () => (
   <section className="intro">
@@ -8,7 +11,10 @@ const Intro = () => (
         <h1 className="intro__title">Hi, I’m Chris Allen</h1>
         <h2 className="intro__sub-title">Front-end developer</h2>
         <p className="intro__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer risus est, bibendum eget leo at, interdum pharetra felis. Etiam sed est in nibh bibendum faucibus a id justo. Vestibulum sit amet diam.</p>
-        <a href="/#work" className="button button--blue intro__button">See Work</a>
+        <Link to="/#work" className="button button--ghost-dark intro__button">
+          <span className="button__text">See Work</span>
+          <span className="button__icon button__icon--down"><Icon /></span>
+        </Link>
         <div className="intro__profile-wrapper">
           <StaticImage
             src="../images/profile.png"

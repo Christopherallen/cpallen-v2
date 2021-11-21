@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Chris Allen`,
     description: ``,
-    author: ``,
+    author: `Chris Allen`,
     siteUrl: `https://cpallen.com`,
   },
   plugins: [
@@ -20,7 +20,7 @@ module.exports = {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
-          include: /images/
+          include: `${__dirname}/src/images`,
         }
       },
     },

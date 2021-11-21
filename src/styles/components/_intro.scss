@@ -29,16 +29,6 @@
     display: inline-block;
     margin-top: 75px;
 
-    // &:hover {
-    //   #{$this}__op--foreground {
-    //     opacity: 0.50;
-    //   }
-
-    //   #{$this}__op--background {
-    //     opacity: 0.25;
-    //   }
-    // }
-
     @include respond-to('small') {
       position: absolute;
       right: -15px;

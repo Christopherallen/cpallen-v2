@@ -12,6 +12,53 @@ main {
   padding: 0 30px;
 }
 
+.cursor {
+  $cursor: &;
+
+  width: 10px;
+  height: 10px;
+  background-color: $blue;
+  border-radius: 100%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  transition: all 200ms ease;
+  transition-property: opacity, background-color, transform;
+  pointer-events: none;
+  z-index: 1;
+
+  &--hover {
+    transform: translate(-50%, -50%) scale(6);
+  }
+
+  &--work-hover {
+    transform: translate(-50%, -50%) scale(8);
+
+    #{$cursor}__icon {
+      opacity: 1;
+      transform: translate(-50%, -49%) scale(0.18);
+    }
+  }
+
+  &--hidden {
+    opacity: 0;
+  }
+
+  &--click {
+    transform: translate(-50%, -50%) scale(8);
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-70%, -49%) scale(0);
+    z-index: 500;
+    transition: 0.3s all;
+
+    opacity: 0;
+  }
+}
+
 .sr-only {
   display: none;
 }
