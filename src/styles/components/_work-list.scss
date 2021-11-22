@@ -1,5 +1,9 @@
 .work-list {
-  margin-top: 400px;
+  margin-top: 200px;
+
+  @include respond-to('small') {
+    margin-top: 400px;
+  }
 
   &__section-title {
     @extend %section-title;
@@ -8,7 +12,11 @@
   }
 
   &__item {
-    margin-bottom: 200px;
+    margin-bottom: 100px;
+
+    @include respond-to('small') {
+      margin-bottom: 200px;
+    }
   }
 
   &__item-image {
@@ -22,9 +30,12 @@
 
   &__item-content-wrapper {
     margin-top: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+    @include respond-to('small') {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   &__item-title {

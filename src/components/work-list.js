@@ -13,8 +13,7 @@ const Work = ( props ) => {
       <div data-sal="slide-up" data-sal-easing="ease" data-sal-duration="900">
       <Link to={ work.uri }>
         <GatsbyImage
-          image={ work.posts.homeImage.sourceUrl}
-          src={work.posts.homeImage.sourceUrl }
+          image={ work.posts.homeImage.localFile.childImageSharp.gatsbyImageData}
           width={1100}
           quality={100}
           placeholder="none"

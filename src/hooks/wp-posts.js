@@ -11,7 +11,11 @@ const UseWordPressPost = () => {
             content
             posts {
               homeImage {
-                sourceUrl
+                localFile {
+                  childImageSharp {
+                    gatsbyImageData(width: 1100, layout: FIXED)
+                  }
+                }
               }
             }
           }

@@ -30,9 +30,13 @@
 }
 
 %section-title {
-  font-size: 64px;
+  font-size: 36px;
   line-height: 1.5;
   font-weight: 900;
+
+  @include respond-to('small') {
+    font-size: 64px;
+  }
 }
 
 %item-title {
