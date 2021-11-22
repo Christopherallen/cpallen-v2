@@ -8,14 +8,14 @@ const Intro = () => (
   <section className="intro">
     <div className="container">
       <div className="intro__wrapper">
-        <h1 className="intro__title">Hi, I’m Chris Allen</h1>
-        <h2 className="intro__sub-title">Front-end developer</h2>
-        <p className="intro__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer risus est, bibendum eget leo at, interdum pharetra felis. Etiam sed est in nibh bibendum faucibus a id justo. Vestibulum sit amet diam.</p>
-        <Link to="/#work" className="button button--ghost-dark intro__button">
+        <h1 className="intro__title" data-sal="fade" data-sal-duration="900">Hi, I’m Chris Allen</h1>
+        <h2 className="intro__sub-title" data-sal="fade" data-sal-duration="900" data-sal-delay="200">Front-end developer</h2>
+        <p className="intro__description" data-sal="fade" data-sal-duration="900" data-sal-delay="400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer risus est, bibendum eget leo at, interdum pharetra felis. Etiam sed est in nibh bibendum faucibus a id justo. Vestibulum sit amet diam.</p>
+        <Link to="/#work" className="button button--ghost-dark intro__button" data-sal="fade" data-sal-duration="900" data-sal-delay="600">
           <span className="button__text">See Work</span>
           <span className="button__icon button__icon--down"><Icon /></span>
         </Link>
-        <div className="intro__profile-wrapper">
+        <div className="intro__profile-wrapper" data-sal="fade" data-sal-duration="900" data-sal-delay="800">
           <StaticImage
             src="../images/profile.png"
             width={387}

@@ -9,6 +9,11 @@ const UseWordPressPost = () => {
             uri
             title
             content
+            posts {
+              homeImage {
+                sourceUrl
+              }
+            }
           }
         }
       }
