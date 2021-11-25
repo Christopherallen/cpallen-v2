@@ -1,8 +1,8 @@
 import * as React from "react"
 
-import MailIcon from "../images/mail.svg"
-import LinkedInIcon from "../images/linkedin.svg"
-import GitHubIcon from "../images/github.svg"
+import MailIcon from "../images/svgs/mail.svg"
+import LinkedInIcon from "../images/svgs/linkedin.svg"
+import GitHubIcon from "../images/svgs/github.svg"
 
 const Footer = () => (
   <footer className="footer">

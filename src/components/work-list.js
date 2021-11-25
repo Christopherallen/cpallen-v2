@@ -2,7 +2,7 @@ import * as React from "react"
 
 import { GatsbyImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
-import Icon from "../images/arrow-right.svg";
+import Icon from "../images/svgs/arrow-right.svg";
 
 
 const Work = ( props ) => {

@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import Icon from "../images/arrow-right.svg";
+import Icon from "../images/svgs/arrow-right.svg";
 
 const Cursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });

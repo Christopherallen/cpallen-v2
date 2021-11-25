@@ -1,7 +1,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import Logo from "../images/logo.svg";
+import Logo from "../images/svgs/logo.svg";
 
 const Header = ({ siteTitle }) => (
   <header className="header">
@@ -27,7 +27,7 @@ const Header = ({ siteTitle }) => (
         <nav className="header__nav">
           <ul className="header__nav-list">
             <li><Link to="/#work" className="header__nav-link">Work</Link></li>
-            <li><Link to="/" className="header__nav-link">Resume</Link></li>
+            <li><Link to="/resume" className="header__nav-link">Resume</Link></li>
           </ul>
         </nav>
       </div>

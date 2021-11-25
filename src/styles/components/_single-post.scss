@@ -1,0 +1,13 @@
+.single-post {
+  position: relative;
+
+  &__hero-wrapper {
+    position: relative;
+    display: block;
+    height: 650px;
+  }
+
+  &__section-title {
+    @extend %section-title;
+  }
+}

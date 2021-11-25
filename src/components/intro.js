@@ -1,7 +1,7 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
-import Icon from "../images/arrow-down.svg"
+import Icon from "../images/svgs/arrow-down.svg"
 
 
 const Intro = () => (

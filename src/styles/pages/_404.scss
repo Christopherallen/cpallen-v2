@@ -1,0 +1,13 @@
+.not-found {
+  padding: 25px 0 200px;
+  text-align: center;
+
+  &__title {
+    @extend %section-title;
+  }
+
+  &__image {
+    display: block;
+    margin: 0 auto 50px;
+  }
+}
