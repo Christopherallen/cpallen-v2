@@ -18,7 +18,7 @@ const ResumePage = () => {
   const skills = resumeData.skills;
 
   const Experience = workExperience.map(( work ) =>
-    <div className="resume__item" data-sal="slide-up" data-sal-easing="ease" data-sal-duration="900" data-sal-delay="200">
+    <div key={ work.dates } className="resume__item" data-sal="slide-up" data-sal-easing="ease" data-sal-duration="900" data-sal-delay="200">
       <div className="resume__left-col">
         <a href="#nogo" className="resume__item-company">{ work.company }</a>
         <div className="resume__item-date">{ work.dates }</div>
@@ -26,18 +26,17 @@ const ResumePage = () => {
       <div className="resume__right-col">
         <div className="resume__item-title">{ work.jobTitle }</div>
         <ul className="resume__item-list">
-          <li className="resume__item-list-item">Lead and oversee small to large scale WordPress websites</li>
-          <li className="resume__item-list-item"> Praesent suscipit, enim id maximus aliquet, augue eros mattis nulla, a finibus ante odio blandit ligula. Sed hendrerit aliquam mi, ac aliquet eros. D</li>
-          <li className="resume__item-list-item"> Praesent suscipit, enim id maximus aliquet, augue eros mattis nulla, a finibus ante odio blandit ligula</li>
+         {work.listItem.map((list) => (
+            <li key={ list.item } className="resume__item-list-item">{list.item}</li>
+          ))}
         </ul>
       </div>
     </div>
   )
 
   const SkillsList = skills.map(( item ) =>
-      <li className="resume__skills-list-item">{ item.skills }</li>
+      <li key={ item.skills } className="resume__skills-list-item">{ item.skills }</li>
   )
-
 
   return(
     <Layout>

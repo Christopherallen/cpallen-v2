@@ -1,10 +1,17 @@
-html,
-body {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: 'Lato', sans-serif;
+  margin: 0;
+
+  &::before {
+    content: "";
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+    border-bottom: 35px solid $blue;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: -23px;
+    top: -5px;
+  }
 }
 
 main {
@@ -31,6 +38,21 @@ main {
   pointer-events: none;
   z-index: 1;
 
+  &::before {
+    content: none;
+    position: relative;
+    display: block;
+    width: 300%;
+    height: 300%;
+    box-sizing: border-box;
+    margin-left: -100%;
+    margin-top: -100%;
+    border-radius: 45px;
+    transform: scale(.13);
+    z-index: -1;
+    animation: pulse-ring 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1;
+  }
+
   &--hover {
     transform: translate(-50%, -50%) scale(6);
   }
@@ -49,7 +71,9 @@ main {
   }
 
   &--click {
-    transform: translate(-50%, -50%) scale(8);
+    &::before {
+      content: '';
+    }
   }
 
   &__icon {
@@ -64,6 +88,21 @@ main {
   }
 }
 
+p {
+  @extend %body-copy;
+}
+
 .sr-only {
   display: none;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(.13);
+    background-color: lighten($blue, 10%);
+  }
+  80%, 100% {
+    opacity: 0;
+    transform: scale(.7);
+  }
 }

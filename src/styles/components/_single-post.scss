@@ -1,5 +1,6 @@
 .single-post {
   position: relative;
+  margin-bottom: 200px;
 
   &__hero-wrapper {
     position: relative;
@@ -9,5 +10,66 @@
 
   &__section-title {
     @extend %section-title;
+
+    margin-top: 125px;
+    margin-bottom: 20px;
+  }
+
+  &__intro-description {
+    @extend %body-copy;
+
+    margin-bottom: 40px;
+  }
+
+  &__intro {
+    display: flex;
+    margin-bottom: 150px;
+    justify-content: space-between;
+  }
+
+  &__sidebar-heading {
+    margin-bottom: 0;
+  }
+
+  &__sidebar-description {
+    margin-top: 0;
+    color: #999;
+  }
+
+  &__left-col {
+    width: 65%;
+  }
+
+  &__right-col {
+    max-width: 230px;
+  }
+
+  &__image {
+    max-width: 100%;
+  }
+
+  &__flex {
+    display: flex;
+
+    .single-post__image-wrapper {
+      margin-top: 20px;
+    }
+
+    .single-post__image-wrapper:nth-child(1) {
+      margin-right:10px;
+    }
+
+    .single-post__image-wrapper:nth-child(2) {
+      margin-left:10px;
+    }
+  }
+
+  &__callout {
+    margin: 150px 0;
+    max-width: 700px;
+  }
+
+  &__callout-text {
+    @extend %callout-text;
   }
 }

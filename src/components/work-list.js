@@ -9,7 +9,7 @@ const Work = ( props ) => {
   const work = props.data;
 
   const workList = work.map(( work ) =>
-    <div className="work-list__item">
+    <div key={ work.title } className="work-list__item">
       <div data-sal="slide-up" data-sal-easing="ease" data-sal-duration="900">
       <Link to={ work.uri }>
         <GatsbyImage

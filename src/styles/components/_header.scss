@@ -1,7 +1,7 @@
 .header {
   $this: &;
 
-  padding: 25px 0;
+  padding: 15px 0;
 
   &__wrapper {
     @include respond-to('small') {
@@ -67,6 +67,7 @@
   &__nav-list {
     display: flex;
     margin-top: 50px;
+    margin-bottom: 0;
     padding-left: 0;
     justify-content: center;
     list-style: none;

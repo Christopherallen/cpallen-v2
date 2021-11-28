@@ -8,7 +8,6 @@ const Cursor = () => {
   const [click, setClick] = useState(false);
   const [linkHover, setLinkHover] = useState(false);
   const [linkWorkHover, setLinkWorkHover] = useState(false);
-
   useEffect(() => {
     const addEventListeners = () => {
       document.addEventListener('mousemove', mMove);
@@ -24,7 +23,6 @@ const Cursor = () => {
       document.removeEventListener('mouseleave', mLeave);
       document.removeEventListener('mousedown', mDown);
       document.removeEventListener('mouseup', mUp);
-
     };
 
     const mDown = () => {
@@ -32,7 +30,9 @@ const Cursor = () => {
     };
 
     const mUp = () => {
-      setClick(false);
+      setTimeout(() => {
+        setClick(false);
+      }, 500);
     };
 
     const mMove = (el) => {
@@ -48,6 +48,7 @@ const Cursor = () => {
     };
 
     const addLinkEvents = () => {
+
       document.querySelectorAll('a').forEach((el) => {
         el.addEventListener('mouseover', () => setLinkHover(true));
         el.addEventListener('mouseout', () => setLinkHover(false));
@@ -71,15 +72,14 @@ const Cursor = () => {
     return () => removeEventListeners();
   }, []);
 
-
   return (
     <div
       className={
-        'cursor ' +
-        (hidden ? 'cursor--hidden ' : ' ') +
-        (click ? 'cursor--click ' : ' ') +
-        (linkHover ? 'cursor--hover ' : ' ') +
-        (linkWorkHover ? 'cursor--work-hover ' : ' ')
+        'cursor' +
+        (hidden ? ' cursor--hidden' : ' ') +
+        (click ? ' cursor--click' : ' ') +
+        (linkHover ? ' cursor--hover' : ' ') +
+        (linkWorkHover ? ' cursor--work-hover' : ' ')
       }
       style={{
         left: `${position.x}px`,

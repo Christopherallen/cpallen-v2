@@ -11,6 +11,9 @@ const Resume = () => {
               dates
               fieldGroupName
               jobTitle
+              listItem {
+                item
+              }
             }
             dateGraduated
             degree
