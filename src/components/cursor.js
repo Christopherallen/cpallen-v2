@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Icon from "../images/svgs/arrow-right.svg";
 
 const Cursor = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [position, setPosition] = useState({ x: -100, y: -100 });
   const [hidden, setHidden] = useState(false);
   const [click, setClick] = useState(false);
   const [linkHover, setLinkHover] = useState(false);
@@ -25,14 +25,12 @@ const Cursor = () => {
       document.removeEventListener('mouseup', mUp);
     };
 
-    const mDown = () => {
+    const mDown = (el) => {
       setClick(true);
     };
 
     const mUp = () => {
-      setTimeout(() => {
-        setClick(false);
-      }, 500);
+      setClick(false);
     };
 
     const mMove = (el) => {
@@ -43,8 +41,9 @@ const Cursor = () => {
       setHidden(true);
     };
 
-    const mEnter = () => {
+    const mEnter = (el) => {
       setHidden(false);
+      setPosition({ x: el.clientX, y: el.clientY });
     };
 
     const addLinkEvents = () => {

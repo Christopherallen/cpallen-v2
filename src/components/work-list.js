@@ -14,7 +14,7 @@ const Work = ( props ) => {
       <Link to={ work.uri }>
         <GatsbyImage
           image={ work.posts.homeImage.localFile.childImageSharp.gatsbyImageData}
-          width={1100}
+          width={100}
           quality={100}
           placeholder="none"
           formats={["auto", "webp", "avif"]}

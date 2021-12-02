@@ -7,8 +7,12 @@
 
   &__title {
     @extend %page-title;
-
-    margin-bottom: 0;
+    
+    margin: 75px 0 10px;
+  
+    @include respond-to('small') {
+      margin: 150px 0 0;
+    }
   }
 
   &__sub-title {
@@ -18,22 +22,31 @@
   }
 
   &__description {
-    @extend %body-copy;
+    @extend %callout-text;
 
+    position: relative;
     max-width: 540px;
-    margin-bottom: 75px;
+    margin-bottom: 30px;
+    z-index: 1;
+
+    @include respond-to('small') {
+      margin-bottom: 75px;
+    }
   }
 
   &__profile-wrapper {
     position: relative;
     display: inline-block;
-    margin-top: 75px;
+    margin: 75px auto 0;
+    max-width: 300px;
+    display: block;
 
-    @include respond-to('small') {
+    @include respond-to('medium') {
       position: absolute;
       right: -15px;
       bottom: -175px;
       margin-top: 0;
+      max-width: none;
     }
   }
 
@@ -46,14 +59,23 @@
     transition: 800ms opacity;
 
     &--foreground {
-      font-size: 64px;
+      font-size: 42px;
       opacity: 0;
       animation: fadeForeground 0.5s ease both;
+
+      @include respond-to('small') {
+        font-size: 64px;
+      }
     }
 
     &--background {
+      display: none;
       font-size: 32px;
       animation: fadeBackground 0.5s ease both;
+
+      @include respond-to('small') {
+        display: block;
+      }
     }
 
     &--one {
@@ -70,14 +92,22 @@
 
     &--three {
       bottom: -20px;
-      left: -70px;
+      left: -35px;
       animation-delay: 700ms;
+
+      @include respond-to('small') {
+        left: -70px;
+      }
     }
 
     &--four {
       bottom: -50px;
-      right: -50px;
+      right: -15px;
       animation-delay: 1500ms;
+
+      @include respond-to('small') {
+        right: -50px;
+      }
     }
 
     &--five {

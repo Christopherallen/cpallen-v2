@@ -47,15 +47,6 @@ const PostTemplate = ( { data } ) => {
         <div className="single-post__image-wrapper" data-sal="slide-up" data-sal-duration="900">
           <img src="https://dev.cpallen.com/wp-content/uploads/2021/11/fresh-browser-scaled.jpg" className="single-post__image" alt="" />
         </div>
-        <div className="single-post__callout" data-sal="slide-up" data-sal-duration="900">
-          <p className="single-post__callout-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ullamcorper placerat rhoncus. Sed nec sapien non turpis facilisis dapibus. Morbi nec risus vel elit ullamcorper ullamcorper. Sed a imperdiet libero. Maecenas mattis arcu at erat porttitor, dignissim accumsan neque vulputate.</p>
-        </div>
-        <div className="single-post__image-wrapper" data-sal="slide-up" data-sal-duration="900">
-          <img src="https://dev.cpallen.com/wp-content/uploads/2021/11/fresh-screens-scaled.jpg" className="single-post__image" alt="" />
-        </div>
-        <div className="single-post__callout" data-sal="slide-up" data-sal-duration="900">
-          <p className="single-post__callout-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ullamcorper placerat rhoncus. Sed nec sapien non turpis facilisis dapibus. Morbi nec risus vel elit ullamcorper ullamcorper. Sed a imperdiet libero. Maecenas mattis arcu at erat porttitor, dignissim accumsan neque vulputate.</p>
-        </div>
         <div className="single-post__flex" data-sal="slide-up" data-sal-duration="900">
           <div className="single-post__image-wrapper">
             <img src="https://dev.cpallen.com/wp-content/uploads/2021/11/fresh-services.png" className="single-post__image" alt="" />
@@ -63,6 +54,12 @@ const PostTemplate = ( { data } ) => {
           <div className="single-post__image-wrapper">
             <img src="https://dev.cpallen.com/wp-content/uploads/2021/11/fresh-services.png" className="single-post__image" alt="" />
           </div>
+        </div>
+        <div className="single-post__image-wrapper" data-sal="slide-up" data-sal-duration="900">
+          <img src="https://dev.cpallen.com/wp-content/uploads/2021/11/fresh-screens-scaled.jpg" className="single-post__image" alt="" />
+        </div>
+        <div className="single-post__callout" data-sal="slide-up" data-sal-duration="900">
+          <p className="single-post__callout-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ullamcorper placerat rhoncus. Sed nec sapien non turpis facilisis dapibus. Morbi nec risus vel elit ullamcorper ullamcorper. Sed.</p>
         </div>
       </div>
       </div>

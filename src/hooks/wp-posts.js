@@ -15,7 +15,7 @@ const UseWordPressPost = () => {
                   childImageSharp {
                     gatsbyImageData(
                       avifOptions: {quality: 10, lossless: false}
-                      layout: FIXED
+                      layout: CONSTRAINED
                       webpOptions: {quality: 100}
                       width: 1100
                     )

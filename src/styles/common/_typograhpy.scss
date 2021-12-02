@@ -10,17 +10,21 @@
 }
 
 %page-title {
-  font-size: 48px;
+  font-size: 32px;
   line-height: 1.1;
   font-weight: 900;
 
   @include respond-to('small') {
+    font-size: 82px;
+  }
+
+  @include respond-to('medium') {
     font-size: 96px;
   }
 }
 
 %sub-title {
-  font-size: 32px;
+  font-size: 28px;
   line-height: 1.5;
   font-weight: 400;
 
@@ -47,17 +51,26 @@
 
 %body-copy {
   font-size: 16px;
-  line-height: 32px;
+  line-height: 30px;
   font-weight: 400;
 }
 
 %button-text {
-  font-size: 18px;
+  font-size: 12px;
   line-height: 27px;
   font-weight: 900;
+
+  @include respond-to('small') {
+    font-size: 18px;
+  }
 }
 
 %callout-text {
-  font-size: 24px;
-  line-height: 48px;
+  font-size: 16px;
+  line-height: 32px;
+
+  @include respond-to('small') {
+    font-size: 24px;
+    line-height: 44px;
+  }
 }

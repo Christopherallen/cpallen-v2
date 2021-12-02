@@ -28,21 +28,37 @@
   &--ghost-dark {
     border: 3px solid $black;
     color: $black;
-    transition: 0.9s all;
   }
 
   &__text {
     display: inline-block;
     transition: 0.3s transform ease-out;
-    transform: translateX(0);
+    transform: translateX(-20px);
+
+    @include respond-to('small') {
+      transform: translateX(0);
+    }
   }
 
   &__icon {
     position: absolute;
     top: 50%;
     right: 25px;
-    opacity: 0;
     transition: 0.25s all ease-out;
+
+    svg {
+      width: 20px;
+      height: 20px;
+
+      @include respond-to('small') {
+        width: 26px;
+        height: 26px;
+      }
+    }
+
+    @include respond-to('small') {
+      opacity: 0;
+    }
 
     &--right {
       transform: translate(-5px, -37%);
