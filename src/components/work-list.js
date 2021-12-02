@@ -18,7 +18,7 @@ const Work = ( props ) => {
           quality={100}
           placeholder="none"
           formats={["auto", "webp", "avif"]}
-          alt="Fresh Consulting Website"
+          alt={work.title}
           className="work-list__item-image"
         />
       </Link>
