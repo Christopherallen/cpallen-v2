@@ -3,7 +3,7 @@ import {graphql, useStaticQuery} from "gatsby"
 const UseWordPressPost = () => {
   const data = useStaticQuery(graphql`
       {
-        allWpPost {
+        allWpPost(sort: { fields: [date], order:DESC }) {
           nodes {
             id
             uri
