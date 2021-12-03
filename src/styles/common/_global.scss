@@ -17,12 +17,12 @@ main {
   $cursor: &;
   
   display: none;
-  width: 10px;
-  height: 10px;
+  width: 60px;
+  height: 60px;
   background-color: $blue;
   border-radius: 100%;
   position: fixed;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(.2);
   transition: all 200ms ease;
   transition-property: opacity, background-color, transform;
   pointer-events: none;
@@ -41,21 +41,21 @@ main {
     box-sizing: border-box;
     margin-left: -100%;
     margin-top: -100%;
-    border-radius: 45px;
+    border-radius: 100%;
     transform: scale(.13);
     z-index: -1;
     animation: pulse-ring 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1;
   }
 
   &--hover {
-    transform: translate(-50%, -50%) scale(6);
+    transform: translate(-50%, -50%) scale(1);
   }
 
   &--work-hover {
 
     #{$cursor}__icon {
       opacity: 1;
-      transform: translate(-50%, -49%) scale(0.18);
+      transform: translate(-50%, -49%) scale(1);
     }
   }
 

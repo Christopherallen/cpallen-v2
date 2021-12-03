@@ -25,12 +25,14 @@ const Cursor = () => {
       document.removeEventListener('mouseup', mUp);
     };
 
-    const mDown = (el) => {
+    const mDown = () => {
       setClick(true);
     };
 
     const mUp = () => {
+      setTimeout(function() {
       setClick(false);
+      }, 500); // Let the click animation run completely
     };
 
     const mMove = (el) => {

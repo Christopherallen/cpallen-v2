@@ -10,7 +10,7 @@ const Intro = () => (
       <div className="intro__wrapper">
         <h1 className="intro__title" data-sal="slide-up" data-sal-duration="900">Hi, I’m Chris Allen</h1>
         <h2 className="intro__sub-title" data-sal="slide-up" data-sal-duration="900" data-sal-delay="200">Front-end developer</h2>
-        <p className="intro__description" data-sal="slide-up" data-sal-duration="900" data-sal-delay="400">Based in Seattle, WA, I build performant, accessible, and intriguing websites and applications.</p>
+        <p className="intro__description" data-sal="slide-up" data-sal-duration="900" data-sal-delay="400">I help build high-quality websites and applications that are performant and accessible.</p>
         <Link to="/#work" className="button button--ghost-dark intro__button" data-sal="slide-up" data-sal-duration="900" data-sal-delay="600">
           <span className="button__text">See Work</span>
           <span className="button__icon button__icon--down"><Icon /></span>

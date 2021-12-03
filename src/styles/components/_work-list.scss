@@ -25,7 +25,9 @@
     min-height: 300px;
 
     &:hover {
-      cursor: none;
+      @include respond-to('small') {
+        cursor: none;
+      }
     }
   }
 
@@ -52,6 +54,6 @@
   }
 
   &__item-description {
-    max-width: 445px;
+    max-width: 450px;
   }
 }
