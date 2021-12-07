@@ -27,8 +27,11 @@
       align-items: center;
 
       &:hover {
-        cursor: none;
         transform: translateX(-4px);
+
+        @include respond-to('small') {
+          cursor: none;
+        }
 
         #{$this}__logo-name {
           span {
@@ -90,8 +93,11 @@
     z-index: 2;
 
     &:hover {
-      cursor: none;
       transform: translateX(-4px);
+
+      @include respond-to('small') {
+        cursor: none;
+      }
     }
 
     @include respond-to('small') {

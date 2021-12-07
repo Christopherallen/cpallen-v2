@@ -10,7 +10,9 @@
   z-index: 2;
 
   &:hover {
-    cursor: none;
+    @include respond-to('small') {
+      cursor: none;
+    }
 
     #{$this}__text {
       transform: translateX(-20px);
