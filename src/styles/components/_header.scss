@@ -27,6 +27,7 @@
       align-items: center;
 
       &:hover {
+        cursor: none;
         transform: translateX(-4px);
 
         #{$this}__logo-name {
@@ -89,6 +90,7 @@
     z-index: 2;
 
     &:hover {
+      cursor: none;
       transform: translateX(-4px);
     }
 
