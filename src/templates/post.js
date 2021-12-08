@@ -8,7 +8,26 @@ import Seo from "../components/seo"
 
 const PostTemplate = ( { data } ) => {
   const post = data.allWpPost.nodes[0];
-  console.log(post);
+
+  const imageGallery = post.posts.images.map(( images ) =>
+    <div key={ images.projectImage.sourceUrl } className="single-post__image-wrapper" data-sal="slide-up" data-sal-duration="900">
+
+      { images.projectImage.localFile.childImageSharp !== null ?
+        <GatsbyImage
+          image={ images.projectImage.localFile.childImageSharp.gatsbyImageData }
+          width={1920}
+          quality={100}
+          placeholder="none"
+          formats={["auto", "webp", "avif", "gif"]}
+          alt={ post.title }
+          className="single-post__image"
+        />
+        :
+        <img src={ images.projectImage.sourceUrl } alt="" className="single-post__image" />
+      }
+    </div>
+  )
+
   return(
     <Layout>
       <Seo title={ post.title } />
@@ -16,7 +35,7 @@ const PostTemplate = ( { data } ) => {
         <div className="single-post__hero-wrapper">
           <div data-sal="fade" data-sal-easing="ease" data-sal-duration="900">
             <GatsbyImage
-              image={ post.featuredImage.node.localFile.childImageSharp.gatsbyImageData}
+              image={ post.featuredImage.node.localFile.childImageSharp.gatsbyImageData }
               width={1920}
               quality={100}
               placeholder="none"
@@ -30,7 +49,7 @@ const PostTemplate = ( { data } ) => {
           <h1 className="single-post__section-title" data-sal="slide-up" data-sal-duration="900">{ post.title }</h1>
           <div className="single-post__intro" data-sal="slide-up" data-sal-duration="900">
             <div className="single-post__left-col">
-              <div className="single-post__intro-description">{ post.posts.description }</div>
+              <div className="single-post__intro-description" dangerouslySetInnerHTML={{__html: post.posts.description}} />
               <a href={ post.posts.siteLink } target="_blank" rel="noreferrer" className="button button--ghost-dark">
                 <span className="button__text">Visit Site</span>
                 <span className="button__icon button__icon--right"><Icon /></span>
@@ -45,15 +64,7 @@ const PostTemplate = ( { data } ) => {
               <p className="single-post__sidebar-description">{ post.posts.team }</p>
             </div>
           </div>
-          <div className="single-post__image-wrapper" data-sal="slide-up" data-sal-duration="900">
-            <img src="https://dev.cpallen.com/wp-content/uploads/2021/11/fresh-browser-scaled.jpg" className="single-post__image" alt="" />
-          </div>
-          <div className="single-post__image-wrapper" data-sal="slide-up" data-sal-duration="900">
-            <img src="https://dev.cpallen.com/wp-content/uploads/2021/11/fresh-screens-scaled.jpg" className="single-post__image" alt="" />
-          </div>
-          <div className="single-post__image-wrapper" data-sal="slide-up" data-sal-duration="900">
-            <img src="https://dev.cpallen.com/wp-content/uploads/2021/11/fresh-screens-scaled.jpg" className="single-post__image" alt="" />
-          </div>
+          { imageGallery }
           <div className="single-post__more">
             <Link to="/#work" className="button button--ghost-dark">
               <span className="button__text">View All Work</span>
@@ -102,6 +113,7 @@ export const query = graphql`
                   gatsbyImageData(layout: FIXED, width: 1100)
                 }
               }
+              sourceUrl
             }
           }
         }
