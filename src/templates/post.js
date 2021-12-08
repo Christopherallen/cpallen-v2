@@ -11,7 +11,6 @@ const PostTemplate = ( { data } ) => {
 
   const imageGallery = post.posts.images.map(( images ) =>
     <div key={ images.projectImage.sourceUrl } className="single-post__image-wrapper" data-sal="slide-up" data-sal-duration="900">
-
       { images.projectImage.localFile.childImageSharp !== null ?
         <GatsbyImage
           image={ images.projectImage.localFile.childImageSharp.gatsbyImageData }
