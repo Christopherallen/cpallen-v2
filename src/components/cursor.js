@@ -9,6 +9,7 @@ const Cursor = () => {
   const [linkHover, setLinkHover] = useState(false);
   const [linkWorkHover, setLinkWorkHover] = useState(false);
   useEffect(() => {
+
     const addEventListeners = () => {
       document.addEventListener('mousemove', mMove);
       document.addEventListener('mouseenter', mEnter);
@@ -30,9 +31,7 @@ const Cursor = () => {
     };
 
     const mUp = () => {
-      setTimeout(function() {
       setClick(false);
-      }, 500); // Let the click animation run completely
     };
 
     const mMove = (el) => {
@@ -70,8 +69,10 @@ const Cursor = () => {
     addEventListeners();
     addLinkEvents();
     addWorkLinkEvents();
-    return () => removeEventListeners();
-  }, []);
+    return () => {
+      removeEventListeners();
+    };
+  }, [position, hidden, click, linkHover, linkWorkHover]);
 
   return (
     <div

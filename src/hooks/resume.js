@@ -6,6 +6,12 @@ const Resume = () => {
       allWpPage(filter: {title: {eq: "Resume"}}) {
         nodes {
           resume {
+            download {
+              sourceUrl
+              localFile {
+                publicURL
+              }
+            }
             workExperience {
               company
               dates

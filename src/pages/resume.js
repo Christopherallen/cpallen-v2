@@ -68,7 +68,7 @@ const ResumePage = () => {
             </div>
           </div>
         </div>
-        <a href="#nogo" className="download-icon">
+        <a href={ resumeData.download.localFile.publicURL} download target="_blank" rel="noreferrer" className="download-icon">
           <DownloadIcon />
         </a>
       </div>
