@@ -49,7 +49,7 @@ const path = require(`path`)
     const posts = result.data.allWpPost.edges
     posts.forEach((node, index) => {
         createPage({
-          path: node.node.slug,
+          path: 'work/' + node.node.slug,
           component: path.resolve(`./src/templates/post.js`),
           context: {
             title: node.node.title,
@@ -60,7 +60,7 @@ const path = require(`path`)
             role: node.node.posts.role,
             team: node.node.posts.team,
             images: node.node.posts.images,
-            slug: node.node.slug,
+            slug: 'work/' + node.node.slug,
             prev: index === 0 ? null : posts[index - 1].node,
             next: index === posts.length - 1 ? null : posts[index + 1].node
           },

@@ -67,7 +67,7 @@ const PostTemplate = ( { pageContext } ) => {
           { imageGallery }
           <div className={paginationClass} data-sal="fade" data-sal-duration="900">
             { prevLink ?
-              <Link to={prevLink} className="single-post__prev">
+              <Link to={`/work${prevLink}`} className="single-post__prev">
                 <span className="single-post__prev-icon"><Icon /></span>
                 { pageContext.prev.title }
               </Link>
@@ -75,7 +75,7 @@ const PostTemplate = ( { pageContext } ) => {
               ""
             }
             { nextLink ?
-              <Link to={nextLink} className="single-post__next">
+              <Link to={`/work${nextLink}`} className="single-post__next">
                 { pageContext.next.title }
                 <span className="single-post__next-icon"><Icon /></span>
               </Link>

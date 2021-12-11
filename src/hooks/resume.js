@@ -7,7 +7,6 @@ const Resume = () => {
         nodes {
           resume {
             download {
-              sourceUrl
               localFile {
                 publicURL
               }

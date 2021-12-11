@@ -26,8 +26,8 @@ const Header = ({ siteTitle }) => (
         </div>
         <nav className="header__nav">
           <ul className="header__nav-list">
-            <li><Link to="/#work" className="header__nav-link">Work</Link></li>
-            <li><Link to="/resume" className="header__nav-link">Resume</Link></li>
+            <li><Link to="/#work" activeClassName="header__nav-link--active" partiallyActive={true} className="header__nav-link">Work</Link></li>
+            <li><Link to="/resume/" activeClassName="header__nav-link--active" className="header__nav-link">Resume</Link></li>
           </ul>
         </nav>
       </div>

@@ -79,20 +79,28 @@
     @extend %pagination;
 
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
+    width: 100%;
     z-index: 1;
     text-decoration: none;
     transition: 0.3s transform ease-out;
     color: $black;
 
+    @include respond-to('small') {
+      align-items: center;
+    }
+
     &:hover {
-      cursor: none;
+      @include respond-to('small') {
+        cursor: none;
+      }
     }
   }
 
   &__next {
     justify-content: flex-end;
+    margin-left: 20px;
 
     &:hover {
       transform: translateX(8px);
@@ -100,6 +108,8 @@
   }
 
   &__prev {
+    margin-right: 20px;
+
     &:hover {
       transform: translateX(-8px);
     }
@@ -108,11 +118,13 @@
   &__next-icon {
     display: flex;
     margin-left: 10px;
+    width: 26px;
   }
 
   &__prev-icon {
     display: flex;
     transform: rotate(180deg);
     margin-right: 10px;
+    width: 26px;
   }
 }

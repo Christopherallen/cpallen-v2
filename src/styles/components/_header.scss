@@ -89,11 +89,16 @@
     margin: 0 30px;
     text-decoration: none;
     color: $black;
-    transition: 0.3s transform ease-out;
+    transition: 0.3s transform ease-out, 0.3s color;
     z-index: 2;
+
+    &--active {
+      color: $blue;
+    }
 
     &:hover {
       transform: translateX(-4px);
+      color: $black;
 
       @include respond-to('small') {
         cursor: none;

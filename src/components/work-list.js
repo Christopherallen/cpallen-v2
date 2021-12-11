@@ -11,7 +11,7 @@ const Work = ( props ) => {
   const workList = work.map(( work ) =>
     <div key={ work.title } className="work-list__item">
       <div data-sal="slide-up" data-sal-easing="ease" data-sal-duration="900">
-      <Link to={ work.uri }>
+      <Link to={`/work${work.uri}`}>
         <GatsbyImage
           image={ work.posts.homeImage.localFile.childImageSharp.gatsbyImageData}
           width={100}
@@ -29,7 +29,7 @@ const Work = ( props ) => {
           <div className="work-list__item-description" dangerouslySetInnerHTML={{__html: work.content}} />
         </div>
         <div className="work-list__item-left-col">
-          <Link to={ work.uri } className="button button--ghost-dark">
+          <Link to={`/work${work.uri}`} className="button button--ghost-dark">
             <span className="button__text">View Details</span>
             <span className="button__icon button__icon--right"><Icon /></span>
           </Link>
