@@ -34,7 +34,7 @@ const path = require(`path`)
                 projectImage {
                   localFile {
                     childImageSharp {
-                      gatsbyImageData(layout: FIXED, width: 1100)
+                      gatsbyImageData(width: 1100)
                     }
                   }
                   sourceUrl

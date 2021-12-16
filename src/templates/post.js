@@ -15,7 +15,9 @@ const PostTemplate = ( { pageContext } ) => {
       { images.projectImage.localFile.childImageSharp !== null ?
         <GatsbyImage
           image={ images.projectImage.localFile.childImageSharp.gatsbyImageData }
+          objectFit="contain"
           width={1920}
+          height={'auto'}
           quality={100}
           placeholder="none"
           formats={["auto", "webp", "avif", "gif"]}

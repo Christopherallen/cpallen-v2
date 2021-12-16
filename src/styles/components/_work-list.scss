@@ -22,7 +22,6 @@
   &__item-image {
     border: 3px solid #eeee;
     max-width: 100%;
-    min-height: 300px;
 
     &:hover {
       @include respond-to('small') {

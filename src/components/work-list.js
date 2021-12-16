@@ -14,6 +14,7 @@ const Work = ( props ) => {
       <Link to={`/work${work.uri}`}>
         <GatsbyImage
           image={ work.posts.homeImage.localFile.childImageSharp.gatsbyImageData}
+          objectFit="contain"
           width={100}
           quality={100}
           placeholder="none"
