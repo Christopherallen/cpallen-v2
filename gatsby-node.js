@@ -15,10 +15,8 @@ const path = require(`path`)
                   childImageSharp {
                     gatsbyImageData(
                       avifOptions: {quality: 10, lossless: false}
-                      layout: FIXED
                       webpOptions: {quality: 100}
                       width: 1920
-                      height: 650
                     )
                   }
                 }

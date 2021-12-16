@@ -13,12 +13,7 @@ const UseWordPressPost = () => {
               homeImage {
                 localFile {
                   childImageSharp {
-                    gatsbyImageData(
-                      avifOptions: {quality: 10, lossless: false}
-                      layout: CONSTRAINED
-                      webpOptions: {quality: 100}
-                      width: 1100
-                    )
+                    gatsbyImageData(width: 1920)
                   }
                 }
               }

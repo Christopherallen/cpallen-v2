@@ -1,6 +1,10 @@
 body {
   font-family: 'Lato', sans-serif;
   margin: 0;
+
+  @include respond-to('small') {
+    cursor: none;
+  }
 }
 
 main {
@@ -15,10 +19,10 @@ main {
 
 .cursor {
   $cursor: &;
-  
+
   display: none;
-  width: 60px;
-  height: 60px;
+  width: 90px;
+  height: 90px;
   background-color: $blue;
   border-radius: 100%;
   position: fixed;
@@ -48,14 +52,14 @@ main {
   }
 
   &--hover {
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(.7);
   }
 
   &--work-hover {
 
     #{$cursor}__icon {
       opacity: 1;
-      transform: translate(-50%, -49%) scale(1);
+      transform: translate(-50%, -49%) scale(1.4);
     }
   }
 

@@ -5,7 +5,11 @@
   &__hero-wrapper {
     position: relative;
     display: block;
-    height: 650px;
+  }
+
+  &__hero {
+    max-width: 100%;
+    max-height: 700px;
   }
 
   &__section-title {
@@ -100,7 +104,7 @@
 
   &__next {
     justify-content: flex-end;
-    margin-left: 20px;
+    margin-left: 18px;
 
     &:hover {
       transform: translateX(8px);
@@ -108,7 +112,7 @@
   }
 
   &__prev {
-    margin-right: 20px;
+    margin-right: 18px;
 
     &:hover {
       transform: translateX(-8px);

@@ -34,28 +34,32 @@ const PostTemplate = ( { pageContext } ) => {
     <Layout>
       <Seo title={ pageContext.title } />
       <div className="single-post">
-        <div className="single-post__hero-wrapper">
-          <div data-sal="fade" data-sal-easing="ease" data-sal-duration="900">
+        <div className="single-post__hero-wrapper" data-sal="fade" data-sal-easing="ease" data-sal-duration="900">
             <GatsbyImage
               image={ pageContext.featured.node.localFile.childImageSharp.gatsbyImageData }
+              objectFit="cover"
               width={1920}
+              height={'auto'}
               quality={100}
               placeholder="none"
               formats={["auto", "webp", "avif"]}
               alt={ pageContext.title }
               className="single-post__hero"
             />
-          </div>
         </div>
         <div className="container">
           <h1 className="single-post__section-title" data-sal="slide-up" data-sal-duration="900">{ pageContext.title }</h1>
           <div className="single-post__intro" data-sal="slide-up" data-sal-duration="900">
             <div className="single-post__left-col">
               <div className="single-post__intro-description" dangerouslySetInnerHTML={{__html: pageContext.description}} />
+              { pageContext.siteLink ?
               <a href={ pageContext.siteLink } target="_blank" rel="noreferrer" className="button button--ghost-dark">
                 <span className="button__text">Visit Site</span>
                 <span className="button__icon button__icon--right"><Icon /></span>
               </a>
+              :
+              ""
+              }
             </div>
             <div className="single-post__right-col">
               <h2 className="single-post__sidebar-heading">Client</h2>
