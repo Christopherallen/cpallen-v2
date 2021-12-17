@@ -1,15 +1,21 @@
 .intro {
   $this: &;
 
+  margin-bottom: 125px;
+
+  @include respond-to('medium') {
+    margin-bottom: 400px;
+  }
+
   &__wrapper {
     position: relative;
   }
 
   &__title {
     @extend %page-title;
-    
+
     margin: 75px 0 10px;
-  
+
     @include respond-to('small') {
       margin: 150px 0 0;
     }
@@ -26,7 +32,7 @@
 
     position: relative;
     max-width: 540px;
-    margin-bottom: 30px;
+    margin: 10px 0 30px;
     z-index: 1;
 
     @include respond-to('small') {

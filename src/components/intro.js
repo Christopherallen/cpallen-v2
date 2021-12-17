@@ -10,7 +10,7 @@ const Intro = () => (
       <div className="intro__wrapper">
         <h1 className="intro__title" data-sal="slide-up" data-sal-duration="900">Hi, I’m Chris Allen</h1>
         <h2 className="intro__sub-title" data-sal="slide-up" data-sal-duration="900" data-sal-delay="200">Front-end developer</h2>
-        <p className="intro__description" data-sal="slide-up" data-sal-duration="900" data-sal-delay="400">I help build high-quality websites and applications that are performant and accessible.</p>
+        <p className="intro__description" data-sal="slide-up" data-sal-duration="900" data-sal-delay="400">I help build high-quality websites and applications.</p>
         <Link to="/#work" className="button button--ghost-dark intro__button" data-sal="slide-up" data-sal-duration="900" data-sal-delay="600">
           <span className="button__text">See Work</span>
           <span className="button__icon button__icon--down"><Icon /></span>
@@ -24,8 +24,8 @@ const Intro = () => (
             formats={["auto", "webp", "avif"]}
             alt="Chris Allen's Logo"
           />
-          <span className="intro__op intro__op--foreground intro__op--one">[ ]</span>
-          <span className="intro__op intro__op--foreground intro__op--two">++</span>
+          <span className="intro__op intro__op--foreground intro__op--one">{ '[ ]' }</span>
+          <span className="intro__op intro__op--foreground intro__op--two">{ '++' }</span>
           <span className="intro__op intro__op--foreground intro__op--three">{ "<>" }</span>
           <span className="intro__op intro__op--foreground intro__op--four">{ "{ }" }</span>
           <span className="intro__op intro__op--background intro__op--five">{ "!==" }</span>

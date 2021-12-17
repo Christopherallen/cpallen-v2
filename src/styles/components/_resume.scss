@@ -89,5 +89,9 @@
 
   &:hover {
     transform: translateY(10px);
+
+    @include respond-to('small') {
+      cursor: none;
+    }
   }
 }

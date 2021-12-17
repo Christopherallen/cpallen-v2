@@ -1,10 +1,4 @@
 .work-list {
-  margin-top: 125px;
-
-  @include respond-to('medium') {
-    margin-top: 400px;
-  }
-
   &__section-title {
     @extend %section-title;
 
@@ -53,6 +47,6 @@
   }
 
   &__item-description {
-    max-width: 450px;
+    max-width: 500px;
   }
 }
