@@ -69,7 +69,11 @@
     }
 
     &--down {
-      transform: translate(0, -45%);
+      transform: translate(0, -37%);
+
+      @include respond-to('small') {
+        transform: translate(0, -45%);
+      }
     }
   }
 }
