@@ -10,7 +10,7 @@
   &__item {
     margin-bottom: 100px;
 
-    @include respond-to('small') {
+    @include respond-to("small") {
       display: flex;
     }
   }
@@ -18,7 +18,7 @@
   &__left-col {
     margin-bottom: 40px;
 
-    @include respond-to('small') {
+    @include respond-to("small") {
       width: 40%;
       margin-bottom: 0;
     }
@@ -33,7 +33,7 @@
     font-size: 24px;
     font-weight: 900;
 
-    @include respond-to('small') {
+    @include respond-to("small") {
       font-size: 32px;
     }
   }
@@ -88,9 +88,9 @@
   transition: 0.3s transform;
 
   &:hover {
-    transform: translateY(10px);
+    transform: scale(1.2);
 
-    @include respond-to('small') {
+    @include respond-to("small") {
       cursor: none;
     }
   }
