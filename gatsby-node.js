@@ -45,24 +45,25 @@ const path = require(`path`)
      }
    `).then(result => {
     const posts = result.data.allWpPost.edges
-    posts.forEach((node, index) => {
-        createPage({
-          path: 'work/' + node.node.slug,
-          component: path.resolve(`./src/templates/post.js`),
-          context: {
-            title: node.node.title,
-            featured: node.node.featuredImage,
-            description: node.node.posts.description,
-            siteLink: node.node.posts.siteLink,
-            client: node.node.posts.client,
-            role: node.node.posts.role,
-            team: node.node.posts.team,
-            images: node.node.posts.images,
-            slug: 'work/' + node.node.slug,
-            prev: index === 0 ? null : posts[index - 1].node,
-            next: index === posts.length - 1 ? null : posts[index + 1].node
-          },
-        })
+    posts.forEach((post, index) => {
+      const postData = post.node;
+      createPage({
+        path: "work/" + post.node.slug,
+        component: path.resolve(`./src/templates/post.js`),
+        context: {
+          title: postData.title,
+          featured: postData.featuredImage,
+          description: postData.posts.description,
+          siteLink: postData.posts.siteLink,
+          client: postData.posts.client,
+          role: postData.posts.role,
+          team: postData.posts.team,
+          images: postData.posts.images,
+          slug: "work/" + postData.slug,
+          prev: index === 0 ? null : posts[index - 1].node,
+          next: index === posts.length - 1 ? null : posts[index + 1].node,
+        },
       })
+    })
    })
  }
