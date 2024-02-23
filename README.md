@@ -1,5 +1,5 @@
 ## Project settings
-* Node version `14.15.0`
+* Node version `>= 14.15.0`
 
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
