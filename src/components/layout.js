@@ -27,10 +27,11 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <a class="skip-main" href="#main">Skip to main content</a>
       <Cursor />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div>
-        <main>{children}</main>
+        <main id="main">{children}</main>
         <Footer />
       </div>
     </>
