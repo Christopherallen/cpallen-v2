@@ -24,15 +24,14 @@ const Intro = () => (
             formats={["auto", "webp", "avif"]}
             alt="Chris Allen's Logo"
           />
-          <span className="intro__op intro__op--foreground intro__op--one">{ '[ ]' }</span>
-          <span className="intro__op intro__op--foreground intro__op--two">{ '++' }</span>
-          <span className="intro__op intro__op--foreground intro__op--three">{ "<>" }</span>
-          <span className="intro__op intro__op--foreground intro__op--four">{ "{ }" }</span>
-          <span className="intro__op intro__op--background intro__op--five">{ "!==" }</span>
-          <span className="intro__op intro__op--background intro__op--six">{ "??" }</span>
-          <span className="intro__op intro__op--background intro__op--seven">{ "%" }</span>
-          <span className="intro__op intro__op--background intro__op--eight">{ "&&" }</span>
-          <span className="intro__op intro__op--background intro__op--nine">{ "*" }</span>
+          <span aria-hidden="true" className="intro__op intro__op--foreground intro__op--one">{'[ ]'}</span>
+          <span aria-hidden="true" className="intro__op intro__op--foreground intro__op--two">{'++'}</span>
+          <span aria-hidden="true" className="intro__op intro__op--foreground intro__op--three">{"<>"}</span>
+          <span aria-hidden="true" className="intro__op intro__op--background intro__op--five">{"!=="}</span>
+          <span aria-hidden="true" className="intro__op intro__op--background intro__op--six">{"??"}</span>
+          <span aria-hidden="true" className="intro__op intro__op--background intro__op--seven">{"%"}</span>
+          <span aria-hidden="true" className="intro__op intro__op--background intro__op--eight">{"&&"}</span>
+          <span aria-hidden="true" className="intro__op intro__op--background intro__op--nine">{"*"}</span>
         </div>
       </div>
     </div>
