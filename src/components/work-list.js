@@ -4,7 +4,6 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import Icon from "../images/svgs/arrow-right.svg";
 
-
 const Work = (props) => {
   const work = props.data;
 
